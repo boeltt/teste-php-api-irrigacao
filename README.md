@@ -22,6 +22,8 @@
 DB_CONNECTION=sqlite\
 DB_DATABASE=database/database.sqlite
 
+SESSION_DRIVER=file
+
 7. Rodar as migrations
 `php artisan migrate
 ---
