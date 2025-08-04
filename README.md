@@ -18,11 +18,13 @@
 4. Gerar chave jwt da aplicação
 `php artisan key:generate`
 
-5. Configurar o SQLite no .env
-DB_CONNECTION=sqlite
+5. Configurar o SQLite no .env\
+DB_CONNECTION=sqlite\
 DB_DATABASE=database/database.sqlite
 
-6. Rodar as migrations
+SESSION_DRIVER=file
+
+7. Rodar as migrations
 `php artisan migrate
 ---
 ## Testes
@@ -38,6 +40,7 @@ DB_DATABASE=database/database.sqlite
   "username": "rafael",
   "password": "123456"
 }
+
 ---
 > **A partir daqui precisa adicionar o header "Authorization" contendo "Bearer TOKEN", sendo esse token o resultado no login**
 > Não usar/errar esse token funciona pra testar as rotas protegidas
