@@ -17,6 +17,7 @@ return new class extends Migration
             $table->float('flowRate');
             $table->float('minApplicationDepth');
             $table->foreignUuid('user_id')->constrained('users');
+            $table->timestamps();
         });
 
     }

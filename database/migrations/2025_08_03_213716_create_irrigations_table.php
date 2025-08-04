@@ -17,6 +17,7 @@ return new class extends Migration
             $table->dateTime('irrigationDate');
             $table->foreignUuid('user_id')->constrained('users');
             $table->foreignUuid('pivot_id')->constrained('pivots');
+            $table->timestamps();
         });
 
     }
